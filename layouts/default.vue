@@ -1,5 +1,5 @@
 <template>
-  <div class='main'>
+  <div class='main' v-loading="$store.state.isRequestLoading">
     <div class='main__sidebar'>
       <side-bar/>
     </div>

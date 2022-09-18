@@ -74,11 +74,11 @@ export default {
   }
 }
 .base-submenu {
-  transition: $transition;
+  transition: all .5s ease;
   overflow: hidden;
-  max-height: 0;
+  max-height: 0px;
   &--open {
-    max-height: 100vh;
+    max-height: 400px;
   }
 }
 .base-menu-item.active {
