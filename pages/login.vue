@@ -7,12 +7,16 @@
         <div class='login-card__body'>
           <div class='form-item'>
             <label>Имя пользователя</label>
-            <el-input v-model='formLogin.name'/>
+            <el-input v-model='formLogin.name'>
+              <svg-icon slot="suffix" name='login/icon-user' />
+            </el-input>
           </div>
           <div class='form-item'>
-          <label>Пароль</label>
-          <el-input v-model='formLogin.password'/>
-        </div>
+            <label>Пароль</label>
+            <el-input type='password' v-model='formLogin.password'>
+              <svg-icon slot="suffix" name='login/icon-lock' />
+            </el-input>
+          </div>
           <div class='form-item'>
             <el-checkbox v-model='formLogin.remember'>Запомнить меня</el-checkbox>
           </div>
@@ -25,21 +29,21 @@
 
 <script>
 export default {
-  layout:'login',
+  layout: 'login',
   name: 'LoginPage',
   data() {
     return {
       formLogin: {
         name: '',
         password: '',
-        remember: false,
+        remember: false
       }
     }
   },
   methods: {
     async userLogin() {
       try {
-        let response = await this.$auth.loginWith('local', this.formLogin)
+        const response = await this.$auth.loginWith('local', this.formLogin)
         console.log(response)
       } catch (err) {
         console.log(err)
@@ -57,6 +61,7 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
 .login-form {
   width: 360px;
   &__title {
@@ -67,6 +72,7 @@ export default {
     text-align: center;
   }
 }
+
 .login-card {
   display: flex;
   flex-direction: column;
@@ -96,5 +102,13 @@ export default {
       color: $color2;
     }
   }
+
+  .icon {
+    width: 15px;
+    height: 100%;
+    padding: 0 5px;
+    color: $color1;
+  }
+
 }
 </style>

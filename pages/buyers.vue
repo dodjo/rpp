@@ -189,11 +189,11 @@ export default {
 
 .pagination {
   background-color: $color5;
-  border-radius: 8px;
+  border-radius: $border-radius;
 }
 
 .table-card {
-  border-radius: 8px;
+  border-radius: $border-radius;
   background-color: $color5;
   overflow: hidden;
   &__filters {
