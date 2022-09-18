@@ -7,16 +7,16 @@
         <div class='login-card__body'>
           <div class='form-item'>
             <label>Имя пользователя</label>
-            <el-input/>
+            <el-input v-model='formLogin.name'/>
           </div>
           <div class='form-item'>
-          <label>Имя пользователя</label>
-          <el-input/>
+          <label>Пароль</label>
+          <el-input v-model='formLogin.password'/>
         </div>
           <div class='form-item'>
-            <el-checkbox>Запомнить меня</el-checkbox>
+            <el-checkbox v-model='formLogin.remember'>Запомнить меня</el-checkbox>
           </div>
-          <el-button type='success' round>Войти</el-button>
+          <el-button type='success' round @click='userLogin'>Войти</el-button>
         </div>
       </div>
     </div>
@@ -26,7 +26,26 @@
 <script>
 export default {
   layout:'login',
-  name: 'LoginPage'
+  name: 'LoginPage',
+  data() {
+    return {
+      formLogin: {
+        name: '',
+        password: '',
+        remember: false,
+      }
+    }
+  },
+  methods: {
+    async userLogin() {
+      try {
+        let response = await this.$auth.loginWith('local', this.formLogin)
+        console.log(response)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
 }
 </script>
 

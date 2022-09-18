@@ -1,14 +1,26 @@
 <template>
-  <div>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores deleniti deserunt enim fugit, hic numquam repellendus veritatis. Aspernatur at delectus id, incidunt ipsum pariatur placeat possimus? Commodi fugiat illo tempora.
-    </p>
+  <div class='page'>
+    <the-header/>
+    {{ users }}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data() {
+    return {
+      users: []
+    }
+  },
+  fetch() {
+    this.getUsers()
+  },
+  methods: {
+    async getUsers() {
+      this.users = await this.$axios.$get('users')
+    }
+  }
 }
 </script>
 

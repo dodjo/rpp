@@ -4,7 +4,6 @@
       <side-bar/>
     </div>
     <div class='main__page'>
-      <the-header/>
       <Nuxt />
     </div>
   </div>
@@ -12,10 +11,9 @@
 
 <script>
 import SideBar from '~/components/SideBar'
-import TheHeader from '~/components/TheHeader'
 export default {
   name: 'default',
-  components: { TheHeader, SideBar }
+  components: { SideBar }
 }
 </script>
 

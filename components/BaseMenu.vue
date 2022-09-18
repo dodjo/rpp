@@ -18,61 +18,61 @@ export default {
         {
           icon: 'sidebar/icon-cup',
           name: 'Тарифы',
-          path: '/',
+          path: '/990',
           visible: true
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-pay',
           name: 'Оплата',
           path: '/123',
           visible: true
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-id',
           name: 'ID',
           path: '/123',
           visible: true
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-users',
           name: 'Пользователи',
           path: '/123',
           visible: true,
           children: [
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-user',
               name: 'Покупатели',
-              path: '/123',
+              path: '/buyers',
               visible: true
             },
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-store',
               name: 'Магазины',
-              path: '/qwe',
+              path: '/stores',
               visible: true
             }
           ]
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-support',
           name: 'Поддержка',
           path: '/123',
           visible: true,
           children: [
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-new',
               name: 'Новое',
               path: '/123',
               visible: true
             },
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-work',
               name: 'В работе',
               path: '/qwe',
               visible: true
             },
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-ready',
               name: 'Решенное',
               path: '/qwe',
               visible: true
@@ -80,19 +80,45 @@ export default {
           ]
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-complaint',
+          name: 'Жалобы',
+          path: '/123',
+          visible: true,
+          children: [
+            {
+              icon: 'sidebar/icon-new',
+              name: 'Новое',
+              path: '/123',
+              visible: true
+            },
+            {
+              icon: 'sidebar/icon-work',
+              name: 'В работе',
+              path: '/qwe',
+              visible: true
+            },
+            {
+              icon: 'sidebar/icon-ready',
+              name: 'Решенное',
+              path: '/qwe',
+              visible: true
+            }
+          ]
+        },
+        {
+          icon: 'sidebar/icon-stat',
           name: 'Статистика',
           path: '/123',
           visible: true,
           children: [
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-user',
               name: 'Покупатели',
               path: '/123',
               visible: true
             },
             {
-              icon: 'sidebar/icon-cup',
+              icon: 'sidebar/icon-store',
               name: 'Магазины',
               path: '/qwe',
               visible: true
@@ -100,13 +126,13 @@ export default {
           ]
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-notify',
           name: 'Уведомления',
           path: '/123',
           visible: true
         },
         {
-          icon: 'sidebar/icon-cup',
+          icon: 'sidebar/icon-settings',
           name: 'Настройки',
           path: '/213',
           visible: true

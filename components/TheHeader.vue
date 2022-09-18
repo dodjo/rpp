@@ -1,12 +1,18 @@
 <template>
   <div class='header'>
-    <h1 class='title'>Заголовок страницы</h1>
+    <h1 class='title'>{{ title }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TheHeader'
+  name: 'TheHeader',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 
